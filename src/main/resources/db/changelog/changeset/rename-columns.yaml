@@ -1,0 +1,13 @@
+databaseChangeLog:
+  - changeSet:
+      id: rename-columns
+      author: Nerox
+      changes:
+        - renameColumn:
+            tableName: employee
+            oldColumnName: fullName
+            newColumnName: full_name
+        - renameColumn:
+            tableName: employee
+            oldColumnName: dateOfBirth
+            newColumnName: date_of_birth

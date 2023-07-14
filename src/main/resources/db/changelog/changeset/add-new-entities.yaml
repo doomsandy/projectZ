@@ -1,0 +1,111 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-employee
+      author: Nerox
+      changes:
+        - createTable:
+            tableName: employee
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: fullName
+                  type: varchar(200)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: dateOfBirth
+                  type: date
+                  constraints:
+                    nullable: false
+              - column:
+                  name: department_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+  - changeSet:
+      id: create-position
+      author: Nerox
+      changes:
+        - createTable:
+            tableName: position
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(200)
+                  constraints:
+                    nullable: false
+  - changeSet:
+      id: create-department
+      author: Nerox
+      changes:
+        - createTable:
+            tableName: department
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(200)
+                  constraints:
+                    nullable: false
+  - changeSet:
+      id: add-foreign-key
+      author: Nerox
+      changes:
+        - addForeignKeyConstraint:
+            baseTableName: employee
+            baseColumnNames: department_id
+            constraintName: fk_employee_department
+            referencedTableName: department
+            referencedColumnNames: id
+  - changeSet:
+      id: create-employee-position
+      author: Nerox
+      changes:
+        - createTable:
+            tableName: employee_position
+            columns:
+              - column:
+                  name: employee_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+              - column:
+                  name: position_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+  - changeSet:
+      id: add-two-foreign-key
+      author: Nerox
+      changes:
+        - addForeignKeyConstraint:
+            baseTableName: employee_position
+            baseColumnNames: employee_id
+            constraintName: fk_employee_position_employee
+            referencedTableName: employee
+            referencedColumnNames: id
+        - addForeignKeyConstraint:
+            baseTableName: employee_position
+            baseColumnNames: position_id
+            constraintName: fk_employee_position_position
+            referencedTableName: position
+            referencedColumnNames: id

@@ -15,10 +15,6 @@ public class AuthorizationService {
 
     public void authorizeUser(String login, String password) {
 
-        if (login == null || password == null) {
-            throw new AuthorizationException("Ошибка авторизации: логин и/или пароль равен null");
-        }
-
         int hashPassword = password.hashCode();
 
         User user = repository.findByLogin(login);
