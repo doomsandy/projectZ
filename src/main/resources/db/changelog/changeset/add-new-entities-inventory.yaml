@@ -1,0 +1,20 @@
+databaseChangeLog:
+  - changeSet:
+      id: add-inventory
+      author: Nerox
+      changes:
+        - createTable:
+            tableName: inventory
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: cost
+                  type: int
+              - column:
+                  name: depreciation
+                  type: int

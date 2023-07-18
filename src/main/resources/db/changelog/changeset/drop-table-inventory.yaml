@@ -1,0 +1,10 @@
+databaseChangeLog:
+  - changeSet:
+      id: drop-table
+      author: Nerox
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            catalogName: tables
+            schemaName: public
+            tableName: inventory

@@ -1,0 +1,28 @@
+databaseChangeLog:
+  - changeSet:
+      id: add-mouse
+      author: Nerox
+      changes:
+        - createTable:
+            tableName: mouse
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: sensor_type
+                  type: varchar(200)
+              - column:
+                  name: inventory_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+              - addForeignKeyConstraint:
+                  baseTableName: mouse
+                  baseColumnNames: inventory_id
+                  referencedTableName: inventory
+                  referencedColumnNames: id
+                  constraintName: fk_mouse_inventory

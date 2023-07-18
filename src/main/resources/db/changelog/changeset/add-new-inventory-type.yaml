@@ -1,0 +1,11 @@
+databaseChangeLog:
+  - changeSet:
+      id: add-new-inventory-type
+      author: Nerox
+      changes:
+        - addColumn:
+            tableName: inventory
+            columns:
+              - column:
+                  name: sensor_type
+                  type: varchar(200)

@@ -5,7 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5b2e9ded-460a-484d-8015-e8935c1ff15a" name="Changes" comment="some changes">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/application/entity/Inventory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/application/entity/Mouse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/changeset/add-new-entities-inventory.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/changeset/add-new-entities-mouse.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/changeset/add-new-entity-inventory.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/changeset/add-new-inventory-type.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/changeset/drop-table-inventory.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/10238699-0ce1-4c11-a015-fabe27eea527.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/10238699-0ce1-4c11-a015-fabe27eea527.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/10238699-0ce1-4c11-a015-fabe27eea527/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/10238699-0ce1-4c11-a015-fabe27eea527/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/10238699-0ce1-4c11-a015-fabe27eea527/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/10238699-0ce1-4c11-a015-fabe27eea527/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/10238699-0ce1-4c11-a015-fabe27eea527/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/10238699-0ce1-4c11-a015-fabe27eea527/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changelog/db.changelog-master.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/db.changelog-master.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,6 +162,9 @@
       <workItem from="1689160909374" duration="4749000" />
       <workItem from="1689190193815" duration="3954000" />
       <workItem from="1689329177649" duration="1310000" />
+      <workItem from="1689330572701" duration="39000" />
+      <workItem from="1689590868190" duration="1300000" />
+      <workItem from="1689671562578" duration="2022000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1688372854313</created>
@@ -186,7 +201,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689330398367</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="some changes">
+      <created>1689330580836</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1689330580836</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
