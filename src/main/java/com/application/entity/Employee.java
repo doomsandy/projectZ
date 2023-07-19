@@ -31,14 +31,26 @@ public class Employee {
     @JoinColumn(name = "department_id")
     private Department department;
 
+    @OneToMany(mappedBy = "employee")
+    private Set<Inventory> inventories = new HashSet<>();
+
     public Employee() {
     }
 
-    public Employee(String fullName, LocalDate dateOfBirth, Set<Position> positions, Department department) {
+    public Employee(String fullName, LocalDate dateOfBirth, Set<Position> positions, Department department, Set<Inventory> inventories) {
         this.fullName = fullName;
         this.dateOfBirth = dateOfBirth;
         this.positions = positions;
         this.department = department;
+        this.inventories = inventories;
+    }
+
+    public Set<Inventory> getInventories() {
+        return inventories;
+    }
+
+    public void setInventories(Set<Inventory> inventories) {
+        this.inventories = inventories;
     }
 
     public long getId() {
@@ -79,5 +91,17 @@ public class Employee {
 
     public void setDepartment(Department department) {
         this.department = department;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "id=" + id +
+                ", fullName='" + fullName + '\'' +
+                ", dateOfBirth=" + dateOfBirth +
+                ", positions=" + positions +
+                ", department=" + department +
+                ", inventories=" + inventories +
+                '}';
     }
 }

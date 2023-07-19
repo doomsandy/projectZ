@@ -7,8 +7,8 @@ public class Mouse extends Inventory {
 
     private String sensorType;
 
-    public Mouse(int cost, int depreciation, String sensorType) {
-        super(cost, depreciation);
+    public Mouse(int cost, int depreciation, String sensorType, Employee employee) {
+        super(cost, depreciation, employee);
         this.sensorType = sensorType;
     }
 
@@ -22,5 +22,15 @@ public class Mouse extends Inventory {
 
     public void setSensorType(String sensorType) {
         this.sensorType = sensorType;
+    }
+
+    @Override
+    public String toString() {
+        return "Mouse{" +
+                "id=" + getId() +
+                ", cost=" + getCost() +
+                ", depreciation=" + getDepreciation() +
+                ", sensorType='" + sensorType + '\'' +
+                '}';
     }
 }

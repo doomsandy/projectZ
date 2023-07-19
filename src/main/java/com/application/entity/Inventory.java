@@ -14,12 +14,25 @@ public abstract class Inventory {
 
     private int depreciation;
 
+    @ManyToOne
+    @JoinColumn(name = "employee_id")
+    private Employee employee;
+
     public Inventory() {
     }
 
-    public Inventory(int cost, int depreciation) {
+    public Inventory(int cost, int depreciation, Employee employee) {
         this.cost = cost;
         this.depreciation = depreciation;
+        this.employee = employee;
+    }
+
+    public Employee getEmployee() {
+        return employee;
+    }
+
+    public void setEmployee(Employee employee) {
+        this.employee = employee;
     }
 
     public long getId() {
@@ -45,4 +58,5 @@ public abstract class Inventory {
     public void setDepreciation(int depreciation) {
         this.depreciation = depreciation;
     }
+
 }

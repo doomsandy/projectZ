@@ -55,4 +55,11 @@ public class Position {
     public void setEmployees(Set<Employee> employees) {
         this.employees = employees;
     }
+
+    @Override
+    public String toString() {
+        return "Position{" +
+                "name='" + name + '\'' +
+                '}';
+    }
 }
