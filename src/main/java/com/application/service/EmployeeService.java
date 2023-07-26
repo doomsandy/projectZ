@@ -1,5 +1,6 @@
 package com.application.service;
 
+import com.application.dto.EmployeeDTO;
 import com.application.entity.Employee;
 import com.application.repository.EmployeeRepository;
 import org.springframework.stereotype.Service;
@@ -7,22 +8,20 @@ import org.springframework.stereotype.Service;
 @Service
 public class EmployeeService {
 
-    private final EmployeeRepository repository;
+    private final EmployeeRepository employeeRepository;
 
-    public EmployeeService(EmployeeRepository repository) {
-        this.repository = repository;
+    public EmployeeService(EmployeeRepository employeeRepository) {
+        this.employeeRepository = employeeRepository;
     }
 
     public void addEmployee(Employee employee) {
 
-        repository.save(employee);
+        employeeRepository.save(employee);
 
     }
 
-    public Employee getEmployee(long id) {
-
-        return repository.findAllById(id);
-
+    public EmployeeDTO getEmployee(long id) {
+        return EmployeeDTO.fromEmployee(employeeRepository.findById(id));
     }
 
 }

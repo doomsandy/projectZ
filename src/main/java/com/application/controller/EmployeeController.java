@@ -1,17 +1,19 @@
 package com.application.controller;
 
+import com.application.dto.EmployeeDTO;
+import com.application.dto.InventoryDTO;
 import com.application.entity.Employee;
+import com.application.entity.Inventory;
 import com.application.service.EmployeeService;
-import javassist.NotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import java.util.Optional;
+
+import java.util.Set;
 
 @RestController
 @RequestMapping("/employee")
 public class EmployeeController {
-
     private final EmployeeService employeeService;
 
     public EmployeeController(EmployeeService employeeService) {
@@ -25,8 +27,8 @@ public class EmployeeController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<String> getEmployee(@PathVariable long id) {
-        Employee employee = employeeService.getEmployee(id);
-        return new ResponseEntity<>(employee.toString(), HttpStatus.OK);
+    public ResponseEntity<EmployeeDTO> getEmployee(@PathVariable long id) {
+        return new ResponseEntity<>(employeeService.getEmployee(id), HttpStatus.OK);
     }
+
 }

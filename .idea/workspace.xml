@@ -4,23 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b2e9ded-460a-484d-8015-e8935c1ff15a" name="Changes" comment="инвентарь">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="5b2e9ded-460a-484d-8015-e8935c1ff15a" name="Changes" comment="получение по id">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/application/dto/DepartmentDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/application/dto/EmployeeDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/application/dto/InventoryDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/application/dto/MouseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/application/dto/PositionDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/application/entity/chair.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/application/entity/keyboard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/application/entity/laptop.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/10238699-0ce1-4c11-a015-fabe27eea527.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/10238699-0ce1-4c11-a015-fabe27eea527.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/10238699-0ce1-4c11-a015-fabe27eea527/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/10238699-0ce1-4c11-a015-fabe27eea527/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/10238699-0ce1-4c11-a015-fabe27eea527/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/10238699-0ce1-4c11-a015-fabe27eea527/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/10238699-0ce1-4c11-a015-fabe27eea527/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/10238699-0ce1-4c11-a015-fabe27eea527/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/application/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/application/controller/EmployeeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/application/entity/Department.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/application/entity/Department.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/application/entity/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/application/entity/Employee.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/application/entity/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/application/entity/Inventory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/application/entity/Mouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/application/entity/Mouse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/application/entity/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/application/entity/Position.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changelog/changeset/add-new-entity-inventory.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changelog/changeset/add-new-inventory-type.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changelog/changeset/drop-table-inventory.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changelog/db.changelog-master.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/db.changelog-master.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/application/repository/EmployeeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/application/repository/EmployeeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/application/service/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/application/service/EmployeeService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +39,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -171,6 +177,14 @@
       <workItem from="1689681296674" duration="95000" />
       <workItem from="1689754741231" duration="2586000" />
       <workItem from="1689774013466" duration="4280000" />
+      <workItem from="1689786486951" duration="846000" />
+      <workItem from="1689931355009" duration="2937000" />
+      <workItem from="1690017414511" duration="688000" />
+      <workItem from="1690044483987" duration="10228000" />
+      <workItem from="1690125730677" duration="4003000" />
+      <workItem from="1690363827996" duration="11812000" />
+      <workItem from="1690376252365" duration="61000" />
+      <workItem from="1690376321942" duration="221000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1688372854313</created>
@@ -221,7 +235,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689681336814</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="получение по id">
+      <created>1689786624017</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1689786624017</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -232,7 +253,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="Nerox" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -247,7 +280,21 @@
     <MESSAGE value="delete hello world commit" />
     <MESSAGE value="some changes" />
     <MESSAGE value="инвентарь" />
-    <option name="LAST_COMMIT_MESSAGE" value="инвентарь" />
+    <MESSAGE value="получение по id" />
+    <option name="LAST_COMMIT_MESSAGE" value="получение по id" />
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="com.application.service.EmployeeService" memberName="inventoryRepository" />
+      </pinned-members>
+    </pin-to-top-manager>
+    <watches-manager>
+      <configuration name="SpringBootApplicationConfigurationType">
+        <watch expression="((Inventory)list.get(0).employee.inventories.toArray()[0]).employee" custom="com.application.entity.Inventory" />
+        <watch expression="((Inventory)list.get(0).employee.inventories.toArray()[0]).employee" custom="com.application.entity.Inventory" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
