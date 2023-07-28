@@ -3,19 +3,19 @@ package com.application.entity;
 import javax.persistence.Entity;
 
 @Entity
-public class chair extends Inventory{
+public class Chair extends Inventory{
 
     private String color;
 
     private String type;
 
-    public chair(int cost, int depreciation, Employee employee, String color, String type) {
+    public Chair(int cost, int depreciation, Employee employee, String color, String type) {
         super(cost, depreciation, employee);
         this.color = color;
         this.type = type;
     }
 
-    public chair() {
+    public Chair() {
 
     }
 

@@ -3,19 +3,19 @@ package com.application.entity;
 import javax.persistence.Entity;
 
 @Entity
-public class keyboard extends Inventory {
+public class Keyboard extends Inventory {
 
     private String size;
 
     private String type;
 
-    public keyboard(int cost, int depreciation, Employee employee, String size, String type) {
+    public Keyboard(int cost, int depreciation, Employee employee, String size, String type) {
         super(cost, depreciation, employee);
         this.size = size;
         this.type = type;
     }
 
-    public keyboard() {
+    public Keyboard() {
     }
 
     public String getSize() {

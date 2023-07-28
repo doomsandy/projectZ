@@ -3,7 +3,7 @@ package com.application.entity;
 import javax.persistence.Entity;
 
 @Entity
-public class laptop extends Inventory {
+public class Laptop extends Inventory {
 
     private String size;
 
@@ -11,14 +11,14 @@ public class laptop extends Inventory {
 
     private int cpu;
 
-    public laptop(int cost, int depreciation, Employee employee, String size, int ram, int cpu) {
+    public Laptop(int cost, int depreciation, Employee employee, String size, int ram, int cpu) {
         super(cost, depreciation, employee);
         this.size = size;
         this.ram = ram;
         this.cpu = cpu;
     }
 
-    public laptop() {
+    public Laptop() {
     }
 
     public String getSize() {

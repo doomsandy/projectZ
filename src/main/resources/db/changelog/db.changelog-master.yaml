@@ -13,3 +13,5 @@ databaseChangeLog:
       file: db/changelog/changeset/add-laptop-chair-keyboard.yaml
   - include:
       file: db/changelog/changeset/add-column-inventory.yaml
+  - include:
+      file: db/changelog/changeset/drop-column-chair.yaml

@@ -1,5 +1,6 @@
 package com.application.dto;
 
+import com.application.entity.Chair;
 import com.application.entity.Inventory;
 import com.application.entity.Mouse;
 
@@ -43,9 +44,12 @@ public class InventoryDTO {
         int depreciation = inventory.getDepreciation();
         if (inventory instanceof Mouse) {
             Mouse mouse = (Mouse) inventory;
-            String sensorType = mouse.getSensorType();
-            return new MouseDTO(cost, depreciation, sensorType);
+            return new MouseDTO(cost, depreciation, mouse.getSensorType());
         }
+        if (inventory instanceof Chair) {
+            Chair chair = (Chair) inventory;
+            return new ChairDTO(cost, depreciation, chair.getColor(), chair.getType());
+         }
         return new InventoryDTO(cost, depreciation);
     }
 
@@ -56,8 +60,11 @@ public class InventoryDTO {
             int depreciation = inventory.getDepreciation();
             if (inventory instanceof Mouse) {
                 Mouse mouse = (Mouse) inventory;
-                String sensorType = mouse.getSensorType();
-                inventoryDTOS.add(new MouseDTO(cost, depreciation, sensorType));
+                inventoryDTOS.add(new MouseDTO(cost, depreciation, mouse.getSensorType()));
+            }
+            if (inventory instanceof Chair) {
+                Chair chair = (Chair) inventory;
+                inventoryDTOS.add(new ChairDTO(cost, depreciation, chair.getColor(), chair.getType()));
             }
         }
         return inventoryDTOS;
