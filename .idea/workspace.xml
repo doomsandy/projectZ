@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b2e9ded-460a-484d-8015-e8935c1ff15a" name="Changes" comment="получение по id">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/10238699-0ce1-4c11-a015-fabe27eea527.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/10238699-0ce1-4c11-a015-fabe27eea527.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/10238699-0ce1-4c11-a015-fabe27eea527/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/10238699-0ce1-4c11-a015-fabe27eea527/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/application/dto/InventoryDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/application/dto/InventoryDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/application/entity/chair.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/application/entity/chair.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/application/entity/keyboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/application/entity/keyboard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/application/entity/laptop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/application/entity/laptop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changelog/db.changelog-master.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/db.changelog-master.yaml" afterDir="false" />
-    </list>
+    <list default="true" id="5b2e9ded-460a-484d-8015-e8935c1ff15a" name="Changes" comment="dto2" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -178,6 +169,7 @@
       <workItem from="1690376321942" duration="221000" />
       <workItem from="1690450173267" duration="1126000" />
       <workItem from="1690572014179" duration="502000" />
+      <workItem from="1690574469020" duration="327000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1688372854313</created>
@@ -235,7 +227,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689786624017</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="dto2">
+      <created>1690574590323</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1690574590323</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -274,7 +273,8 @@
     <MESSAGE value="some changes" />
     <MESSAGE value="инвентарь" />
     <MESSAGE value="получение по id" />
-    <option name="LAST_COMMIT_MESSAGE" value="получение по id" />
+    <MESSAGE value="dto2" />
+    <option name="LAST_COMMIT_MESSAGE" value="dto2" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
