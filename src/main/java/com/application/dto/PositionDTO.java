@@ -1,34 +1,21 @@
 package com.application.dto;
 
 import com.application.entity.Position;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.util.HashSet;
 import java.util.Set;
 
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
 public class PositionDTO {
 
     private String name;
-
-    public PositionDTO(String name) {
-        this.name = name;
-    }
-
-    public PositionDTO() {
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public static PositionDTO fromPosition(Position position) {
-        PositionDTO positionDTO = new PositionDTO();
-        positionDTO.setName(position.getName());
-        return positionDTO;
-    }
 
     public static Set<PositionDTO> fromPositions(Set<Position> positions) {
         Set<PositionDTO> positionDTOS = new HashSet<>();

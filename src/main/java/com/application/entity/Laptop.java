@@ -1,8 +1,17 @@
 package com.application.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import javax.persistence.Entity;
 
 @Entity
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
 public class Laptop extends Inventory {
 
     private String size;
@@ -11,37 +20,4 @@ public class Laptop extends Inventory {
 
     private int cpu;
 
-    public Laptop(int cost, int depreciation, Employee employee, String size, int ram, int cpu) {
-        super(cost, depreciation, employee);
-        this.size = size;
-        this.ram = ram;
-        this.cpu = cpu;
-    }
-
-    public Laptop() {
-    }
-
-    public String getSize() {
-        return size;
-    }
-
-    public void setSize(String size) {
-        this.size = size;
-    }
-
-    public int getRam() {
-        return ram;
-    }
-
-    public void setRam(int ram) {
-        this.ram = ram;
-    }
-
-    public int getCpu() {
-        return cpu;
-    }
-
-    public void setCpu(int cpu) {
-        this.cpu = cpu;
-    }
 }

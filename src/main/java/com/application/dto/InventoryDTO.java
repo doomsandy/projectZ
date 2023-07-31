@@ -3,41 +3,22 @@ package com.application.dto;
 import com.application.entity.Chair;
 import com.application.entity.Inventory;
 import com.application.entity.Mouse;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.util.HashSet;
 import java.util.Set;
 
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
 public class InventoryDTO {
+
     private int cost;
     private int depreciation;
-
-    public InventoryDTO() {
-    }
-
-    public InventoryDTO(int cost, int depreciation) {
-        this.cost = cost;
-        this.depreciation = depreciation;
-    }
-
-    public InventoryDTO(int cost, int depreciation, MouseDTO mouseDTO) {
-
-    }
-
-    public int getCost() {
-        return cost;
-    }
-
-    public void setCost(int cost) {
-        this.cost = cost;
-    }
-
-    public int getDepreciation() {
-        return depreciation;
-    }
-
-    public void setDepreciation(int depreciation) {
-        this.depreciation = depreciation;
-    }
 
     public static Set<InventoryDTO> fromInventories(Set<Inventory> inventories) {
         Set<InventoryDTO> inventoryDTOS = new HashSet<>();
