@@ -26,3 +26,6 @@ databaseChangeLog:
                   referencedTableName: inventory
                   referencedColumnNames: id
                   constraintName: fk_mouse_inventory
+      rollback:
+        - dropTable:
+            tableName: mouse

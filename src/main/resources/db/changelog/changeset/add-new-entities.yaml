@@ -109,3 +109,10 @@ databaseChangeLog:
             constraintName: fk_employee_position_position
             referencedTableName: position
             referencedColumnNames: id
+      rollback:
+        - dropTable:
+            tableName: employee
+        - dropTable:
+            tableName: position
+        - dropTable:
+            tableName: department
