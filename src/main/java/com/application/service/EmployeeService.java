@@ -5,6 +5,7 @@ import com.application.entity.Employee;
 import com.application.repository.EmployeeRepository;
 import org.springframework.stereotype.Service;
 
+
 @Service
 public class EmployeeService {
 
@@ -15,9 +16,7 @@ public class EmployeeService {
     }
 
     public void addEmployee(Employee employee) {
-
         employeeRepository.save(employee);
-
     }
 
     public EmployeeDTO getEmployee(long id) {
