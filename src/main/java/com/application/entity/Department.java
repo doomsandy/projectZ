@@ -1,10 +1,19 @@
 package com.application.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
 @Entity
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
 @Table(name = "department")
 public class Department {
 
@@ -13,52 +22,9 @@ public class Department {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Column(name = "name", unique = true, updatable = true)
+    @Column(name = "name", unique = true)
     private String name;
 
     @OneToMany(mappedBy = "department")
     private Set<Employee> employees = new HashSet<>();
-
-    public Department() {
-    }
-
-    public Department(String name, Set<Employee> employees) {
-        this.name = name;
-        this.employees = employees;
-    }
-
-    public Department(String name) {
-        this.name = name;
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Set<Employee> getEmployees() {
-        return employees;
-    }
-
-    public void setEmployees(Set<Employee> employees) {
-        this.employees = employees;
-    }
-
-    @Override
-    public String toString() {
-        return "Department{" +
-                "name='" + name + '\'' +
-                '}';
-    }
 }

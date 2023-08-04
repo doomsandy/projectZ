@@ -1,8 +1,17 @@
 package com.application.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import javax.persistence.*;
 
 @Entity
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
 @Inheritance(strategy = InheritanceType.JOINED)
 public class Inventory {
 
@@ -17,54 +26,5 @@ public class Inventory {
     @ManyToOne
     @JoinColumn(name = "employee_id")
     private Employee employee;
-
-    public Inventory() {
-    }
-
-    public Inventory(int cost, int depreciation, Employee employee) {
-        this.cost = cost;
-        this.depreciation = depreciation;
-        this.employee = employee;
-    }
-
-    public Employee getEmployee() {
-        return employee;
-    }
-
-    public void setEmployee(Employee employee) {
-        this.employee = employee;
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public int getCost() {
-        return cost;
-    }
-
-    public void setCost(int cost) {
-        this.cost = cost;
-    }
-
-    public int getDepreciation() {
-        return depreciation;
-    }
-
-    public void setDepreciation(int depreciation) {
-        this.depreciation = depreciation;
-    }
-
-    @Override
-    public String toString() {
-        return "Inventory{" +
-                "cost=" + cost +
-                ", depreciation=" + depreciation +
-                '}';
-    }
 
 }

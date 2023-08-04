@@ -1,0 +1,12 @@
+databaseChangeLog:
+  - changeSet:
+      id: drop-column-chair
+      author: Nerox
+      changes:
+        - dropColumn:
+            columnName: inventory_id
+            tableName: chair
+      rollback:
+        - dropColumn:
+            tableName: chair
+            columnName: inventory_id

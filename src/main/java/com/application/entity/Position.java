@@ -1,11 +1,20 @@
 package com.application.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
 @Entity
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
 @Table(name = "position")
 public class Position {
 
@@ -20,46 +29,4 @@ public class Position {
     @ManyToMany(mappedBy = "positions")
     private Set<Employee> employees = new HashSet<>();
 
-    public Position() {
-    }
-
-    public Position(String name, Set<Employee> employees) {
-        this.name = name;
-        this.employees = employees;
-    }
-
-    public Position(String name) {
-        this.name = name;
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Set<Employee> getEmployees() {
-        return employees;
-    }
-
-    public void setEmployees(Set<Employee> employees) {
-        this.employees = employees;
-    }
-
-    @Override
-    public String toString() {
-        return "Position{" +
-                "name='" + name + '\'' +
-                '}';
-    }
 }

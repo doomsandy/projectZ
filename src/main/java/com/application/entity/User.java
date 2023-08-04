@@ -1,10 +1,19 @@
 package com.application.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Objects;
 
 @Entity
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
 @Table(name = "users")
 public class User implements Serializable {
 
@@ -21,56 +30,8 @@ public class User implements Serializable {
     @Column(name = "password", unique = false, updatable = false)
     private int password;
 
-    public User() {
-    }
-
     public User(String login, int password) {
-        this.setLogin(login);
-        this.setPassword(password);
-    }
-
-    public int getPassword() {
-        return password;
-    }
-
-    public void setPassword(int password) {
-        this.password = password;
-    }
-
-    public String getLogin() {
-        return login;
-    }
-
-    public void setLogin(String login) {
         this.login = login;
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    @Override
-    public String toString() {
-        return "UserDataSet{" +
-                "id=" + id +
-                ", login='" + login + ", password=" + password + '\'' +
-                '}';
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        User that = (User) o;
-        return password == that.password;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(password);
+        this.password = password;
     }
 }

@@ -1,0 +1,102 @@
+databaseChangeLog:
+  - changeSet:
+      id: laptop
+      author: Nerox
+      changes:
+        - createTable:
+            tableName: laptop
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: ram
+                  type: varchar(200)
+              - column:
+                  name: cpu
+                  type: varchar(200)
+              - column:
+                  name: size
+                  type: varchar(200)
+              - column:
+                  name: inventory_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+              - addForeignKeyConstraint:
+                  baseTableName: laptop
+                  baseColumnNames: inventory_id
+                  referencedTableName: inventory
+                  referencedColumnNames: id
+                  constraintName: fk_laptop_inventory
+  - changeSet:
+      id: keyboard
+      author: Nerox
+      changes:
+        - createTable:
+            tableName: keyboard
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: size
+                  type: varchar(200)
+              - column:
+                  name: type
+                  type: varchar(200)
+              - column:
+                  name: inventory_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+              - addForeignKeyConstraint:
+                  baseTableName: keyboard
+                  baseColumnNames: inventory_id
+                  referencedTableName: inventory
+                  referencedColumnNames: id
+                  constraintName: fk_keyboard_inventory
+
+  - changeSet:
+      id: chair
+      author: Nerox
+      changes:
+        - createTable:
+            tableName: chair
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: color
+                  type: varchar(200)
+              - column:
+                  name: type
+                  type: varchar(200)
+              - column:
+                  name: inventory_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+              - addForeignKeyConstraint:
+                  baseTableName: chair
+                  baseColumnNames: inventory_id
+                  referencedTableName: inventory
+                  referencedColumnNames: id
+                  constraintName: fk_chair_inventory
+      rollback:
+        - dropTable:
+            tableName: laptop
+        - dropTable:
+            tableName: chair
+        - dropTable:
+            tableName: keyboard

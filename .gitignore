@@ -1,4 +1,3 @@
 # Project exclude paths
-/target/
-/src/main/resources/db/changelog/changeset/
-/src/main/resources/db/changelog/db.changelog-master.yaml
+/target
+/.idea
