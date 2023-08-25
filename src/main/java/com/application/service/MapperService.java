@@ -11,17 +11,17 @@ import java.util.Map;
 
 @Service
 public class MapperService {
-    private final Map<String, Mapper<?, ?>> mapperMap;
+    private final Map<Class<?>, Mapper<?, ?>> mapperMap;
 
     public MapperService(List<Mapper<?, ?>> mappers) {
         this.mapperMap = new HashMap<>();
         for (Mapper<?, ?> mapper : mappers) {
-            mapperMap.put(mapper.getClass().getSimpleName(), mapper);
+            mapperMap.put(mapper.getMyClass(), mapper);
         }
     }
 
     public <E extends Inventory, D extends InventoryDTO> D toDto(E entity) {
-        Mapper<E, D> mapper = (Mapper<E, D>) mapperMap.get(entity.getClass().getSimpleName());
-        return mapper.toDto(entity);
+        Mapper<E, D> mapper = (Mapper<E, D>) mapperMap.get(entity.getClass());
+        return mapper.map(entity);
     }
 }
