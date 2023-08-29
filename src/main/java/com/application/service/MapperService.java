@@ -2,9 +2,8 @@ package com.application.service;
 
 import com.application.dto.InventoryDTO;
 import com.application.entity.Inventory;
-import com.application.mapper.Mapper;
 import org.springframework.stereotype.Service;
-
+import com.application.mapper.Mapper;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
