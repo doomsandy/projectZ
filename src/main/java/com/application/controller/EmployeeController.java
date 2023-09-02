@@ -4,14 +4,15 @@ import com.application.dto.EmployeeDTO;
 import com.application.dto.InventoryDTO;
 import com.application.entity.Employee;
 import com.application.mapper.InventoryToInventoryDtoMapper;
-import com.application.mapper.Mapper;
 import com.application.repository.InventoryRepository;
 import com.application.service.EmployeeService;
 import com.application.service.MapperService;
+import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+@AllArgsConstructor
 @RestController
 @RequestMapping("/employee")
 public class EmployeeController {
@@ -19,13 +20,6 @@ public class EmployeeController {
     private final InventoryRepository inventoryRepository;
     private final MapperService mapperService;
     private final InventoryToInventoryDtoMapper inventoryToInventoryDtoMapper;
-
-    public EmployeeController(EmployeeService employeeService, InventoryRepository inventoryRepository, MapperService mapperService, InventoryToInventoryDtoMapper inventoryToInventoryDtoMapper) {
-        this.employeeService = employeeService;
-        this.inventoryRepository = inventoryRepository;
-        this.mapperService = mapperService;
-        this.inventoryToInventoryDtoMapper = inventoryToInventoryDtoMapper;
-    }
 
     @PostMapping
     public ResponseEntity<String> addEmployee(@RequestBody Employee employee) {
