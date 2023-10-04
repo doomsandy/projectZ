@@ -1,23 +1,19 @@
 package com.application.entity;
 
 import lombok.AllArgsConstructor;
-import lombok.Getter;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 import javax.persistence.*;
-import java.io.Serializable;
-import java.util.Objects;
 
 @Entity
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Getter
-@Setter
 @Table(name = "users")
-public class User implements Serializable {
+public class User {
 
-    private static final long serialVersionUID = -8706689714326132798L;
+    public enum Role {USER, ADMIN}
 
     @Id
     @Column(name = "id")
@@ -28,10 +24,8 @@ public class User implements Serializable {
     private String login;
 
     @Column(name = "password", unique = false, updatable = false)
-    private int password;
+    private String password;
 
-    public User(String login, int password) {
-        this.login = login;
-        this.password = password;
-    }
+    @Enumerated(EnumType.STRING)
+    private Role role;
 }

@@ -1,0 +1,17 @@
+databaseChangeLog:
+  - changeSet:
+      id: add-colum-users
+      author: Nerox
+      changes:
+        - addColumn:
+            tableName: users
+            columns:
+              - column:
+                  name: role
+                  type: varchar(200)
+                  constraints:
+                    nullable: false
+      rollback:
+        - dropColumn:
+            tableName: users
+            columnName: role

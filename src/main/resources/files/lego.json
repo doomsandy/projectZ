@@ -1,0 +1,15 @@
+{
+  "request": {
+    "method": "POST",
+    "url": "/lego",
+    "bodyPatterns": [
+      {
+        "matchesJsonPath": "$.jti"
+      }
+    ]
+  },
+  "response": {
+    "status": 200,
+    "body": "All is good"
+  }
+}

@@ -1,5 +1,12 @@
-version: "2.19.1"
 services:
+  wiremock:
+    image: wiremock/wiremock:latest
+    container_name: wiremock
+    volumes:
+      - ./files/:/home/wiremock/__files/
+      - ./mappings/:/home/wiremock/mappings/
+    ports:
+      - "8079:8080"
   postgres:
     image: postgres:15.3
     environment:
